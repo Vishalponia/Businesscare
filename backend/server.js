@@ -21,11 +21,18 @@ const __dirname = path.dirname(__filename);
 connectDB();
 
 app.use(helmet());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+// app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(rateLimit({ windowMs: 60*1000, max: 100 }));
 
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://businesscare.vercel.app/"
+  ],
+  credentials: true
+}));
 
 
 // Routes
@@ -33,6 +40,10 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/form", formRoutes);
 app.use("/api/form", uploadRoutes); // legacy upload/download
 app.use(express.urlencoded({ extended: true }));
+
+
+
+
 
 
 // Static
