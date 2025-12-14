@@ -7,7 +7,8 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchUploads = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/admin/uploads", {
+        // const res = await fetch("http://localhost:5000/api/admin/uploads", {
+         const res = await fetch("https://businesscare.onrender.com/api/admin/uploads", {
           headers: { Authorization: token },
         });
         const data = await res.json();
@@ -23,7 +24,8 @@ export default function AdminDashboard() {
     if (!confirm("Are you sure you want to delete this file?")) return;
     try {
       const res = await fetch(
-        `http://localhost:5000/api/admin/delete/${id}/${fileName}`,
+        // `http://localhost:5000/api/admin/delete/${id}/${fileName}`,
+        `https://businesscare.onrender.com/api/admin/delete/${id}/${fileName}`,
         {
           method: "DELETE",
           headers: { Authorization: token },
@@ -69,7 +71,8 @@ export default function AdminDashboard() {
 
               <td className="px-4 py-2 space-x-2">
                 <a
-                  href={`http://localhost:5000/uploads/${f.fileName}`}
+                  // href={`http://localhost:5000/uploads/${f.fileName}`}
+                   href={`https://businesscare.onrender.com/uploads/${f.fileName}`}
                   download
                   className="bg-green-500 px-3 py-1 rounded text-black"
                 >

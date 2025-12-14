@@ -10,11 +10,14 @@ export default function FormPortal() {
 
     // For now, static blank form
     setDownloadLink(
-      `http://localhost:5000/blank-forms/${encodeURIComponent("BUSINESS CARE REGISTRATION FORM.pdf")}`
+      // `http://localhost:5000/blank-forms/${encodeURIComponent("BUSINESS CARE REGISTRATION FORM.pdf")}`
+       `https://businesscare.onrender.com/blank-forms/${encodeURIComponent("BUSINESS CARE REGISTRATION FORM.pdf")}`
     );
 
     // Upload link
-    setUploadLink("http://localhost:5000/api/form/upload");
+    // setUploadLink("http://localhost:5000/api/form/upload");
+    setUploadLink("https://businesscare.onrender.com/api/form/upload");
+     setUploadLink("/api/form/upload");
   };
 
   const handleFileUpload = async (e) => {

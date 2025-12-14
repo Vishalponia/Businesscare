@@ -521,7 +521,8 @@ export default function BusinessRegistrationForm() {
     const fd = new FormData();
     Object.keys(form).forEach(k => fd.append(k, form[k]));
     // send multipart but with only text fields
-    const res = await fetch("http://localhost:5000/api/form/submit-form", {
+    // const res = await fetch("http://localhost:5000/api/form/submit-form", {
+    const res = await fetch("https://businesscare.onrender.com/api/form/submit-form", {
       method: "POST",
       body: fd
     });

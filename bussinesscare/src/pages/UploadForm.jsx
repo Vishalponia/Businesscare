@@ -13,7 +13,8 @@ export default function UploadForm() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:5000/api/form/upload", {
+      // const res = await fetch("http://localhost:5000/api/form/upload", {
+       const res = await fetch("https://businesscare.onrender.com/api/form/upload", {
         method: "POST",
         body: formData,
       });

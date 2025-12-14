@@ -6,7 +6,8 @@ export default function FormOptionsPage() {
 
   // Fetch all company names from backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/forms")
+    // fetch("http://localhost:5000/api/forms")
+    fetch("https://businesscare.onrender.com/api/forms")
       .then(res => res.json())
       .then(data => {
         if (data.success) {
@@ -62,7 +63,8 @@ export default function FormOptionsPage() {
 
           {/* Download Blank Form */}
           <a
-            href={`http://localhost:5000/blank-forms/${encodeURIComponent("BUSINESS CARE REGISTRATION FORM.pdf")}`}
+            // href={`http://localhost:5000/blank-forms/${encodeURIComponent("BUSINESS CARE REGISTRATION FORM.pdf")}`}
+             href={`https://businesscare.onrender.com/blank-forms/${encodeURIComponent("BUSINESS CARE REGISTRATION FORM.pdf")}`}
             download
             className="block w-full text-center bg-yellow-500 text-black font-bold py-4 rounded-xl hover:scale-105 transition-all"
           >
