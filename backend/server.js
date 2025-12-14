@@ -11,7 +11,7 @@ import { connectDB } from "./config/db.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import formRoutes from "./routes/formRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
-import cors from "cors";
+
 
 dotenv.config();
 const app = express();
