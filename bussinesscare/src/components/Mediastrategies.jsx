@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 export default function MediaStrategySection() {
   const navigate = useNavigate();
   return (
-    <section className="w-full bg-gradient-to-r from-blue-500 to-blue-100 py-20 px-6">
+    <section className="w-full bg-gradient-to-r from-blue-500 to-blue-100 py-0 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT CONTENT */}

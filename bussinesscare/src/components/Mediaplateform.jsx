@@ -2,7 +2,7 @@ import { PhoneIcon } from "@heroicons/react/24/solid";
 
 export default function MediaPlatformSection() {
   return (
-    <section className="w-full bg-gradient-to-r from-blue-500 to-blue-100 py-24 px-6">
+    <section className="w-full bg-gradient-to-r from-blue-500 to-blue-100 py-0 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
         {/* LEFT CONTENT */}
