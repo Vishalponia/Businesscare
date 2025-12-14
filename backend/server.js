@@ -11,6 +11,7 @@ import { connectDB } from "./config/db.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import formRoutes from "./routes/formRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
+import cors from "cors";
 
 dotenv.config();
 const app = express();
@@ -22,12 +23,6 @@ connectDB();
 
 app.use(helmet());
 // app.use(cors({ origin: "http://localhost:5173", credentials: true }));
-app.use(express.json());
-app.use(morgan("dev"));
-app.use(rateLimit({ windowMs: 60*1000, max: 100 }));
-
-import cors from "cors";
-
 app.use(cors({
   origin: [
     "http://localhost:5173",
@@ -35,7 +30,14 @@ app.use(cors({
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
-}));
+}));  
+app.use(express.json());
+app.use(morgan("dev"));
+app.use(rateLimit({ windowMs: 60*1000, max: 100 }));
+
+
+
+
 
 
 
