@@ -17,7 +17,7 @@ export default function FormPortal() {
     // Upload link
     // setUploadLink("http://localhost:5000/api/form/upload");
     setUploadLink("https://businesscare.onrender.com/api/form/upload");
-     setUploadLink("/api/form/upload");
+    //  setUploadLink("/api/form/upload");
   };
 
   const handleFileUpload = async (e) => {
