@@ -26,13 +26,17 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(rateLimit({ windowMs: 60*1000, max: 100 }));
 
+import cors from "cors";
+
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://businesscare.vercel.app/"
+    "https://businesscare.vercel.app"
   ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
 
 
 // Routes
