@@ -2,7 +2,9 @@ import Registration from "../models/Registration.js";
 import path from "path";
 import fs from "fs";
 import { registrationHtml } from "../utils/htmlTemplate.js";
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
+
 
 export const handleFormSubmit = async (req, res) => {
   try {
@@ -39,7 +41,13 @@ export const handleFormSubmit = async (req, res) => {
     const html = registrationHtml({ ...body, categories, telecastSegments });
 
     // Launch Puppeteer (headless)
-    const browser = await puppeteer.launch({ args: ['--no-sandbox','--disable-setuid-sandbox'] });
+    // const browser = await puppeteer.launch({ args: ['--no-sandbox','--disable-setuid-sandbox'] });
+    const browser = await puppeteer.launch({
+    args: chromium.args,
+    executablePath: await chromium.executablePath(),
+    headless: chromium.headless,
+    });
+
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: "networkidle0" });
 
