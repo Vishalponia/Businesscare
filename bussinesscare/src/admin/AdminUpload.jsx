@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 
 export default function AdminUpload() {
@@ -8,7 +10,8 @@ export default function AdminUpload() {
   const token = localStorage.getItem("adminToken");
 
   const handleUpload = async () => {
-    if (!companyName || !founderName || !file) return alert("Enter all fields and select a file");
+    if (!companyName || !founderName || !file)
+      return alert("Enter all fields and select a file");
 
     const formData = new FormData();
     formData.append("companyName", companyName);
@@ -16,11 +19,13 @@ export default function AdminUpload() {
     formData.append("file", file);
 
     try {
-      // const res = await fetch("http://localhost:5000/api/form/upload", {
-      const res = await fetch("https://businesscare.onrender.com/api/form/upload", {
-        method: "POST",
-        body: formData,
-      });
+      const res = await fetch(
+        "https://businesscare.onrender.com/api/form/upload",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (!res.ok) {
         const text = await res.text();
@@ -38,38 +43,46 @@ export default function AdminUpload() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center p-10">
-      <h1 className="text-3xl font-bold text-yellow-400 mb-6">Upload Form</h1>
+    <div className="min-h-screen bg-black flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-gray-900 border border-yellow-500/30 rounded-2xl p-6 sm:p-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-6 text-center">
+          Upload Form
+        </h1>
 
-      <input
-        type="text"
-        placeholder="Company Name"
-        className="mb-4 p-3 rounded bg-gray-800 border border-yellow-500 text-white"
-        value={companyName}
-        onChange={(e) => setCompanyName(e.target.value)}
-      />
+        <div className="space-y-4">
+          <input
+            type="text"
+            placeholder="Company Name"
+            className="w-full p-3 rounded bg-gray-800 border border-yellow-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            value={companyName}
+            onChange={(e) => setCompanyName(e.target.value)}
+          />
 
-      <input
-        type="text"
-        placeholder="Founder Name"
-        className="mb-4 p-3 rounded bg-gray-800 border border-yellow-500 text-white"
-        value={founderName}
-        onChange={(e) => setFounderName(e.target.value)}
-      />
+          <input
+            type="text"
+            placeholder="Founder Name"
+            className="w-full p-3 rounded bg-gray-800 border border-yellow-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            value={founderName}
+            onChange={(e) => setFounderName(e.target.value)}
+          />
 
-      <input
-        type="file"
-        accept="application/pdf"
-        onChange={(e) => setFile(e.target.files[0])}
-        className="mb-4 text-white"
-      />
+          <input
+            type="file"
+            accept="application/pdf"
+            onChange={(e) => setFile(e.target.files[0])}
+            className="w-full text-sm text-white file:mr-4 file:py-2 file:px-4 
+                       file:rounded file:border-0 file:bg-yellow-500 
+                       file:text-black file:font-semibold cursor-pointer"
+          />
 
-      <button
-        onClick={handleUpload}
-        className="px-6 py-3 bg-yellow-500 text-black font-bold rounded hover:scale-105 transition-all"
-      >
-        Upload
-      </button>
+          <button
+            onClick={handleUpload}
+            className="w-full px-6 py-3 bg-yellow-500 text-black font-bold rounded-xl hover:scale-105 transition-all"
+          >
+            Upload
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
