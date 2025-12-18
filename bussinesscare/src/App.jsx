@@ -21,6 +21,10 @@ import FormOptionsPage from "./pages/FormOptionsPage";
 import UploadForm from "./pages/UploadForm";
 import BusinessRegistrationForm from "./components/BusinessRegistrationForm";
 import ContactUs from "./pages/ContactUs";
+import Award from "./pages/Award";
+import Services from "./pages/Services";
+import Videos from "./pages/Videos";
+import GalleryPage from "./pages/Gallery";
 // -------------------- ADMIN PAGES --------------------
 import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
@@ -59,6 +63,14 @@ function App() {
         <Route path="/form-options" element={<FormOptionsPage />} />
         <Route path="/upload-form" element={<UploadForm />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/award" element={<Award />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        
+
+        
+
 
         {/* -------------------- ADMIN ROUTES -------------------- */}
         <Route path="/admin" element={<AdminLogin />} />

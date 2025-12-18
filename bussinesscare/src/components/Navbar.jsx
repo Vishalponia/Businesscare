@@ -1,95 +1,20 @@
-// import { useState } from "react";
-// import { Menu, X } from "lucide-react";
-// import { useNavigate } from "react-router-dom";
-
-// export default function Navbar() {
-//   const [open, setOpen] = useState(false);
-//   const navigate = useNavigate();
-
-//   const navItems = [
-//     "Home",
-//     "About",
-//     "Award",
-//     "Services",
-//     "Videos",
-//     "Gallery",
-//     <li
-//     className="hover:text-blue-600 cursor-pointer"
-//     onClick={() => navigate("/contact-us")}
-//     >Contact Us</li>
-//   ];
-
-//   return (
-//     <nav className="w-full shadow-md bg-gray-800 fixed top-0 left-0 z-50">
-//       <div className="max-w-7xl mx-auto px-1 py-2 flex justify-between items-center">
-//         {/* Brand Logo */}
-//         <div className="flex items-center gap-2">
-//           <img
-//             src="https://businesscare.org.in/wp-content/uploads/2023/03/logo-web-png.png" 
-//             alt="Brand"
-//             className="h-15 w-30 object-fit "
-//           />
-//           <h1 className="text-xl font-bold text-white">BussinessCare</h1>
-//         </div>
-
-//         {/* Desktop Menu */}
-//         <ul className="hidden md:flex gap-6 items-center text-white font-medium">
-//           {navItems.map((item) => (
-//             <li key={item} className="hover:text-blue-600 cursor-pointer">
-//               {item}
-//             </li>
-//           ))}
-//           <button className="bg-blue-500 text-white px-4 py-2 rounded-xl shadow hover:bg-blue-800 hover:text-black transition">
-//             Schedule a Call Today
-//           </button>
-//         </ul>
-
-//         {/* Mobile Icon */}
-//         <button
-//           className="md:hidden text-white"
-//           onClick={() => setOpen(!open)}
-//         >
-//           {open ? <X size={28} /> : <Menu size={28} />}
-//         </button>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {open && (
-//         <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4">
-//           {navItems.map((item) => (
-//             <div
-//               key={item}
-//               className="text-gray-700 font-medium hover:text-blue-600 cursor-pointer"
-//             >
-//               {item}
-//             </div>
-//           ))}
-
-//           <button className="bg-blue-400 text-white w-full py-2 rounded-xl shadow hover:bg-blue-900  transition">
-//             Schedule a Call Today
-//           </button>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// }
-
-
-
-
-
-
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const navigate = useNavigate();
+
+  const aboutItems = [
+    { label: "Our Founders", path: "/about/founders" },
+    { label: "Mission & Vision", path: "/about/mission-vision" },
+    { label: "Why Us", path: "/about/why-us" },
+  ];
 
   const navItems = [
     { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
     { label: "Award", path: "/award" },
     { label: "Services", path: "/services" },
     { label: "Videos", path: "/videos" },
@@ -97,44 +22,79 @@ export default function Navbar() {
     { label: "Contact Us", path: "/contact-us" },
   ];
 
-  const handleNavigate = (path) => {
+  const go = (path) => {
     navigate(path);
-    setOpen(false); // close mobile menu
+    setOpen(false);
+    setAboutOpen(false);
   };
 
   return (
-    <nav className="w-full bg-gray-800 fixed top-0 left-0 z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Logo */}
+    <nav className="fixed top-0 left-0 w-full bg-gray-800 z-50 shadow">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+
+        {/* LOGO */}
         <div
+          onClick={() => go("/")}
           className="flex items-center gap-2 cursor-pointer"
-          onClick={() => navigate("/")}
         >
           <img
             src="https://businesscare.org.in/wp-content/uploads/2023/03/logo-web-png.png"
-            alt="BusinessCare"
-            className="h-10 w-auto"
+            alt="logo"
+            className="h-10"
           />
-          <h1 className="text-xl font-bold text-white">BusinessCare</h1>
+          <span className="text-white text-xl font-bold">BusinessCare</span>
         </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-6 text-white font-medium">
-          {navItems.map((item) => (
-            <li
+        {/* ================= DESKTOP ================= */}
+        <div className="hidden md:flex items-center gap-6 text-white font-medium">
+
+          <button onClick={() => go("/")} className="hover:text-blue-400">
+            Home
+          </button>
+
+          {/* ABOUT BUTTON */}
+          <div className="relative">
+            <button
+              onClick={() => setAboutOpen(!aboutOpen)}
+              className="flex items-center gap-1 hover:text-blue-400"
+            >
+              About <ChevronDown size={16} />
+            </button>
+
+            {aboutOpen && (
+              <div className="absolute top-full left-0 mt-3 w-56 bg-white rounded-xl shadow-xl z-50">
+                {aboutItems.map((item) => (
+                  <button
+                    key={item.label}
+                    onClick={() => go(item.path)}
+                    className="block w-full text-left px-5 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {navItems.slice(1).map((item) => (
+            <button
               key={item.label}
-              onClick={() => handleNavigate(item.path)}
-              className="cursor-pointer hover:text-blue-400 transition"
+              onClick={() => go(item.path)}
+              className="hover:text-blue-400"
             >
               {item.label}
-            </li>
+            </button>
           ))}
-          <button className="ml-4 bg-blue-500 px-4 py-2 rounded-xl shadow hover:bg-blue-600 transition">
+
+          <button
+            onClick={() => go("/contact-us")}
+            className="ml-4 bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-600"
+          >
             Schedule a Call Today
           </button>
-        </ul>
+        </div>
 
-        {/* Mobile Toggle */}
+        {/* MOBILE ICON */}
         <button
           className="md:hidden text-white"
           onClick={() => setOpen(!open)}
@@ -143,19 +103,52 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ================= MOBILE MENU ================= */}
       {open && (
-        <div className="md:hidden bg-white shadow-lg px-6 py-5 space-y-4">
-          {navItems.map((item) => (
-            <div
+        <div className="md:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
+
+          <button onClick={() => go("/")} className="block font-medium">
+            Home
+          </button>
+
+          {/* MOBILE ABOUT */}
+          <div>
+            <button
+              onClick={() => setAboutOpen(!aboutOpen)}
+              className="flex justify-between w-full font-medium"
+            >
+              About <ChevronDown size={18} />
+            </button>
+
+            {aboutOpen && (
+              <div className="mt-2 ml-4 space-y-2">
+                {aboutItems.map((item) => (
+                  <button
+                    key={item.label}
+                    onClick={() => go(item.path)}
+                    className="block text-gray-600 hover:text-blue-500"
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {navItems.slice(1).map((item) => (
+            <button
               key={item.label}
-              onClick={() => handleNavigate(item.path)}
-              className="text-gray-700 font-medium cursor-pointer hover:text-blue-500"
+              onClick={() => go(item.path)}
+              className="block font-medium"
             >
               {item.label}
-            </div>
+            </button>
           ))}
-          <button className="w-full bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition">
+
+          <button
+            onClick={() => go("/contact-us")}
+            className="w-full bg-blue-500 text-white py-2 rounded-xl"
+          >
             Schedule a Call Today
           </button>
         </div>
