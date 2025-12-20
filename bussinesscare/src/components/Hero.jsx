@@ -221,18 +221,18 @@ export default function HeroSection() {
             </p>
 
             {/* BUTTONS */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col cursor-pointer sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate("/contact-us")}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg"
+                className="bg-blue-600 cursor-pointer text-white px-6 py-3 rounded-lg"
               >
                 Schedule an Appointment
               </motion.button>
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate("/about/founders")}
-                className="bg-orange-600 text-white px-6 py-3 rounded-lg"
+                className="bg-orange-600 cursor-pointer text-white px-6 py-3 rounded-lg"
               >
                 Our Achievements
               </motion.button>

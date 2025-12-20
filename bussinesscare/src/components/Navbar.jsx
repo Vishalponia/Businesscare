@@ -14,7 +14,6 @@ export default function Navbar() {
   ];
 
   const navItems = [
-    { label: "Home", path: "/" },
     { label: "Award", path: "/award" },
     { label: "Services", path: "/services" },
     { label: "Videos", path: "/videos" },
@@ -42,115 +41,126 @@ export default function Navbar() {
             alt="logo"
             className="h-10"
           />
-          <span className="text-white text-xl font-bold">BusinessCare</span>
+          <span className="text-white text-xl font-bold">
+            BusinessCare
+          </span>
         </div>
 
-        {/* ================= DESKTOP ================= */}
+        {/* ================= DESKTOP MENU ================= */}
         <div className="hidden md:flex items-center gap-6 text-white font-medium">
 
-          <button onClick={() => go("/")} className="hover:text-blue-400">
+          {/* HOME */}
+          <div
+            onClick={() => go("/")}
+            className="cursor-pointer hover:text-blue-400 transition"
+          >
             Home
-          </button>
+          </div>
 
-          {/* ABOUT BUTTON */}
+          {/* ABOUT DROPDOWN */}
           <div className="relative">
-            <button
+            <div
               onClick={() => setAboutOpen(!aboutOpen)}
-              className="flex items-center gap-1 hover:text-blue-400"
+              className="flex items-center gap-1 cursor-pointer hover:text-blue-400 transition"
             >
               About <ChevronDown size={16} />
-            </button>
+            </div>
 
             {aboutOpen && (
               <div className="absolute top-full left-0 mt-3 w-56 bg-white rounded-xl shadow-xl z-50">
                 {aboutItems.map((item) => (
-                  <button
+                  <div
                     key={item.label}
                     onClick={() => go(item.path)}
-                    className="block w-full text-left px-5 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                    className="px-5 py-3 text-gray-700 cursor-pointer hover:bg-blue-50 hover:text-blue-600 transition"
                   >
                     {item.label}
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
           </div>
 
-          {navItems.slice(1).map((item) => (
-            <button
+          {/* OTHER LINKS */}
+          {navItems.map((item) => (
+            <div
               key={item.label}
               onClick={() => go(item.path)}
-              className="hover:text-blue-400"
+              className="cursor-pointer hover:text-blue-400 transition"
             >
               {item.label}
-            </button>
+            </div>
           ))}
 
-          <button
+          {/* CTA */}
+          <div
             onClick={() => go("/contact-us")}
-            className="ml-4 bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-600"
+            className="ml-4 bg-blue-500 px-4 py-2 rounded-xl cursor-pointer hover:bg-blue-600 transition"
           >
             Schedule a Call Today
-          </button>
+          </div>
         </div>
 
-        {/* MOBILE ICON */}
-        <button
-          className="md:hidden text-white"
+        {/* ================= MOBILE ICON ================= */}
+        <div
+          className="md:hidden text-white cursor-pointer"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        </div>
       </div>
 
       {/* ================= MOBILE MENU ================= */}
       {open && (
         <div className="md:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
 
-          <button onClick={() => go("/")} className="block font-medium">
+          <div
+            onClick={() => go("/")}
+            className="cursor-pointer font-medium"
+          >
             Home
-          </button>
+          </div>
 
           {/* MOBILE ABOUT */}
           <div>
-            <button
+            <div
               onClick={() => setAboutOpen(!aboutOpen)}
-              className="flex justify-between w-full font-medium"
+              className="flex justify-between items-center cursor-pointer font-medium"
             >
               About <ChevronDown size={18} />
-            </button>
+            </div>
 
             {aboutOpen && (
               <div className="mt-2 ml-4 space-y-2">
                 {aboutItems.map((item) => (
-                  <button
+                  <div
                     key={item.label}
                     onClick={() => go(item.path)}
-                    className="block text-gray-600 hover:text-blue-500"
+                    className="cursor-pointer text-gray-600 hover:text-blue-500"
                   >
                     {item.label}
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
           </div>
 
-          {navItems.slice(1).map((item) => (
-            <button
+          {navItems.map((item) => (
+            <div
               key={item.label}
               onClick={() => go(item.path)}
-              className="block font-medium"
+              className="cursor-pointer font-medium"
             >
               {item.label}
-            </button>
+            </div>
           ))}
 
-          <button
+          <div
             onClick={() => go("/contact-us")}
-            className="w-full bg-blue-500 text-white py-2 rounded-xl"
+            className="w-full bg-blue-500 text-white py-2 rounded-xl text-center cursor-pointer hover:bg-blue-600"
           >
             Schedule a Call Today
-          </button>
+          </div>
         </div>
       )}
     </nav>
