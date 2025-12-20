@@ -66,18 +66,18 @@ export default function ContactUs() {
       {/* ===== NAVBAR ===== */}
       <Navbar />
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800">
+      <div className="min-h-screen bg-gradient-to-br from-blue-500 via-white to-blue-700 text-gray-800">
 
         {/* ===== HERO ===== */}
         <div
-          className="relative h-[320px] flex items-center justify-center bg-cover bg-center"
+          className="relative h-[520px] flex items-center justify-center bg-cover bg-center"
           style={{
             backgroundImage:
               "url(https://images.unsplash.com/photo-1556761175-5973dc0f32e7)",
           }}
         >
           <div className="relative z-10 text-center px-6">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-blue-700">
+            <h1 className="text-7xl md:text-7xl font-extrabold text-orange-400">
               Contact Us
             </h1>
           </div>

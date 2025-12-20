@@ -33,10 +33,10 @@ export default function Gallery() {
         className="pt-28 pb-20 py-0 bg-cover bg-center relative"
         style={{
           backgroundImage:
-            "url(https://plus.unsplash.com/premium_photo-1681400054984-c20bf5879c3b?w=500)",
+            "url(https://images.pexels.com/photos/424436/pexels-photo-424436.jpeg)",
         }}
       >
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT TEXT */}
@@ -55,7 +55,7 @@ export default function Gallery() {
             <img
               src="https://businesscare.org.in/wp-content/uploads/2023/03/WhatsApp-Image-2023-03-31-at-12.42.45.png"
               alt="Gallery Highlight"
-              className="w-full rounded-2xl  brightness-150"
+              className="w-full rounded-2xl  "
             />
           </div>
         </div>

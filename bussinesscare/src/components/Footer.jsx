@@ -262,7 +262,7 @@ export default function Footer() {
           <p className="text-yellow-400">
             © {new Date().getFullYear()} Businesscare.org.in
           </p>
-
+            
           <div className="flex justify-center gap-8 mt-4 text-sm">
             <Link to="/privacy-policy" className="cursor-pointer hover:text-yellow-500">
               Privacy Policy

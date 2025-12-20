@@ -6,20 +6,17 @@ export default function Services() {
     <>
       <Navbar />
 
-      {/* HERO */}
+      {/* ================= FULL PAGE HERO ================= */}
       <section
-        className="pt-12 pb-60 text-white"
+        className="h-screen w-full bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
-            "url('https://plus.unsplash.com/premium_photo-1681399975135-252eab5fd2db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D')",
-             backgroundSize: "cover",
-            // backgroundPosition: "center",
-        
+            "url('https://images.pexels.com/photos/1555900/pexels-photo-1555900.jpeg')",
         }}
       >
-        <div className="bg-black/60 py-20">
-          <h1 className="text-center text-amber-300 text-4xl md:text-5xl font-bold">
-            SERVICES
+        <div className="bg-black/30 w-full h-full flex items-center justify-center">
+          <h1 className="text-amber-300 text-5xl md:text-6xl font-extrabold tracking-wider">
+            OUR SERVICES
           </h1>
         </div>
       </section>
@@ -36,7 +33,7 @@ export default function Services() {
       <ServiceSection
         bg="bg-green-500"
         title="OLD BUSINESS GROWTH PROGRAMMES STRATEGY"
-        text="How to Revive an Old Business. Raising the buzz of the product from door to door, make everyone need, make everyone rote again and again. Stand out from competitors."
+        text="How to Revive an Old Business. Raising the buzz of the product from door to door, make everyone need, make everyone rote again and again."
         image="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.20.19-e1681987481804.png"
       />
 
@@ -63,38 +60,41 @@ export default function Services() {
   );
 }
 
-/* ================= REUSABLE SECTION ================= */
+/* ================= REUSABLE SERVICE SECTION ================= */
 
 function ServiceSection({ bg, title, text, image, extra }) {
   return (
     <section className={`${bg} py-0`}>
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
-        {/* LEFT CONTENT */}
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+        {/* CONTENT */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
             {title}
           </h2>
-          <p className="text-gray-700 leading-relaxed text-lg mb-6">
+
+          <p className="text-gray-800 text-lg mb-6 leading-relaxed">
             {text}
           </p>
 
           {extra && (
-            <p className="font-semibold text-gray-800 mb-6">{extra}</p>
+            <p className="font-semibold text-gray-900 mb-6">{extra}</p>
           )}
 
-          <button 
-          onClick={() => window.location.href = "tel:+917042438293"}
-          className="bg-blue-900 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
+          <button
+            onClick={() => (window.location.href = "tel:+917042438293")}
+            className="cursor-pointer bg-blue-900 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition"
+          >
             Call Now
           </button>
         </div>
 
-        {/* RIGHT IMAGE */}
+        {/* IMAGE */}
         <div>
           <img
             src={image}
             alt={title}
-            className="w-full rounded-2xl "
+            className="w-full rounded-3xl "
           />
         </div>
       </div>

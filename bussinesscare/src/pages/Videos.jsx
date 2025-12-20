@@ -13,12 +13,12 @@ export default function Videos() {
           className="absolute inset-0 bg-cover bg-center brightness-125"
           style={{
             backgroundImage:
-              "url(https://plus.unsplash.com/premium_photo-1681400054984-c20bf5879c3b?w=500&auto=format&fit=crop&q=60)",
+              "url(https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg)",
           }}
         ></div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -27,7 +27,7 @@ export default function Videos() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-400">
               Our Video Presence
             </h1>
-            <p className="text-lg text-gray-200 leading-relaxed">
+            <p className="text-lg text-blue-500 font-extrabold leading-relaxed">
               BusinessCare brings your brand into the spotlight through
               powerful video storytelling, national coverage and impactful
               digital reach.
@@ -39,7 +39,7 @@ export default function Videos() {
             <img
               src="https://businesscare.org.in/wp-content/uploads/2023/03/WhatsApp-Image-2023-03-31-at-12.42.45.png"
               alt="BusinessCare Videos"
-              className="rounded-2xl shadow-2xl w-full max-w-lg"
+              className="rounded-2xl  w-full max-w-lg"
             />
           </div>
         </div>

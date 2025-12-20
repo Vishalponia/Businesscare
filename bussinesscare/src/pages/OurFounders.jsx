@@ -63,7 +63,7 @@ export default function OurFounder() {
         </div>
 
         {/* ================= FOUNDER 2 ================= */}
-        <div className="max-w-7xl  mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl  mx-auto px-6 py-0 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* LEFT CONTENT */}
           <div>

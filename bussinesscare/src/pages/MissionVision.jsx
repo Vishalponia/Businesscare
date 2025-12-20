@@ -16,7 +16,7 @@ export default function MissionVision() {
           <img
             src="https://businesscare.org.in/wp-content/uploads/2023/03/SAV.jpg"
             alt="Mission Vision Banner"
-            className="w-full h-[380px] object-cover"
+            className="w-full h-[580px] object-cover"
           />
         </div>
 

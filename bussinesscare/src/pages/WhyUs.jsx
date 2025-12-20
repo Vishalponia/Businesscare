@@ -9,29 +9,24 @@ export default function WhyUs() {
     <>
       <Navbar />
 
-      <div className="bg-white text-gray-800">
+      <div className="bg-yellow-500 text-gray-800">
 
         {/* ================= TOP BANNER ================= */}
-        <div className="relative w-full mt-16 h-[400px]">
+        <div className="relative w-full mt-16 ">
           <img
             src="https://businesscare.org.in/wp-content/uploads/2023/03/di9-1.jpg"
             alt="Why Business Care"
-            className="w-full  h-[520px] object-cover"
+            className="w-full  h-[580px] object-cover"
           />
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white text-center px-4">
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-orange-400 text-center px-4">
               Why Business Care
             </h1>
           </div>
         </div>
 
         {/* ================= INTRO TEXT ================= */}
-        <div className="max-w-5xl mx-auto px-6 py-16 text-center">
-          <p className="text-lg text-black font-bold leading-relaxed">
-            Business improves the quality of life in two ways. Firstly, it provides
-            high-quality goods and services that make life easier and better.
-          </p>
-        </div>
+        
 
         {/* ================= MAIN CONTENT ================= */}
         <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
@@ -41,7 +36,7 @@ export default function WhyUs() {
             <img
               src="https://businesscare.org.in/wp-content/uploads/2023/03/poja-sh.jpg"
               alt="Business Care Founder"
-              className="rounded-2xl shadow-2xl w-full  max-w-md object-cover"
+              className="rounded-2xl  w-full  max-w-md object-cover"
             />
           </div>
 
