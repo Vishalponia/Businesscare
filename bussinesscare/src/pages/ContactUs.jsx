@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -17,14 +16,49 @@ export default function ContactUs() {
     meetingType: "",
   });
 
+  const WHATSAPP_NUMBER = "918799746544"; 
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
-    alert("Form submitted successfully!");
+
+    const message = `
+📌 *New Business Inquiry*
+
+🏢 Company Name: ${form.companyName}
+👤 Owner Name: ${form.ownerName}
+📞 Mobile: ${form.mobile}
+🌐 Website: ${form.website}
+📧 Email: ${form.email}
+🏭 Business Type: ${form.businessType}
+📦 Product/Service: ${form.product}
+💰 Monthly Budget: ${form.budget}
+📍 Location: ${form.location}
+🗓 Meeting Type: ${form.meetingType}
+    `;
+
+    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+
+    // Optional: clear form after submit
+    setForm({
+      companyName: "",
+      ownerName: "",
+      mobile: "",
+      website: "",
+      email: "",
+      businessType: "",
+      product: "",
+      budget: "",
+      location: "",
+      meetingType: "",
+    });
   };
 
   return (
@@ -34,7 +68,7 @@ export default function ContactUs() {
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800">
 
-        {/* ================= HERO ================= */}
+        {/* ===== HERO ===== */}
         <div
           className="relative h-[320px] flex items-center justify-center bg-cover bg-center"
           style={{
@@ -42,7 +76,6 @@ export default function ContactUs() {
               "url(https://images.unsplash.com/photo-1556761175-5973dc0f32e7)",
           }}
         >
-          <div className="absolute inset-0 bg-white/0" />
           <div className="relative z-10 text-center px-6">
             <h1 className="text-4xl md:text-5xl font-extrabold text-blue-700">
               Contact Us
@@ -50,7 +83,7 @@ export default function ContactUs() {
           </div>
         </div>
 
-        {/* ================= FORM ================= */}
+        {/* ===== FORM ===== */}
         <div className="max-w-4xl mx-auto px-6 py-16">
           <form
             onSubmit={handleSubmit}
@@ -61,15 +94,15 @@ export default function ContactUs() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Input label="Company Name" name="companyName" onChange={handleChange} />
-              <Input label="Owner Name" name="ownerName" onChange={handleChange} />
-              <Input label="Mobile Number" name="mobile" onChange={handleChange} />
-              <Input label="Website" name="website" onChange={handleChange} />
-              <Input label="Email" name="email" type="email" onChange={handleChange} />
-              <Input label="Type of Business" name="businessType" onChange={handleChange} />
-              <Input label="Product / Service" name="product" onChange={handleChange} />
-              <Input label="Monthly Budget" name="budget" onChange={handleChange} />
-              <Input label="Business Location" name="location" onChange={handleChange} />
+              <Input label="Company Name" name="companyName" value={form.companyName} onChange={handleChange} />
+              <Input label="Owner Name" name="ownerName" value={form.ownerName} onChange={handleChange} />
+              <Input label="Mobile Number" name="mobile" value={form.mobile} onChange={handleChange} />
+              <Input label="Website" name="website" value={form.website} onChange={handleChange} />
+              <Input label="Email" name="email" type="email" value={form.email} onChange={handleChange} />
+              <Input label="Type of Business" name="businessType" value={form.businessType} onChange={handleChange} />
+              <Input label="Product / Service" name="product" value={form.product} onChange={handleChange} />
+              <Input label="Monthly Budget" name="budget" value={form.budget} onChange={handleChange} />
+              <Input label="Business Location" name="location" value={form.location} onChange={handleChange} />
             </div>
 
             {/* Meeting Type */}
@@ -86,9 +119,9 @@ export default function ContactUs() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 hover:scale-[1.02] transition"
+              className="w-full bg-green-600 text-white font-bold py-4 rounded-xl hover:bg-green-700 transition"
             >
-              Submit Request
+              Send on WhatsApp
             </button>
           </form>
         </div>
@@ -100,22 +133,24 @@ export default function ContactUs() {
   );
 }
 
-/* ================= REUSABLE ================= */
-
-function Input({ label, name, type = "text", onChange }) {
+/* ===== REUSABLE INPUT ===== */
+function Input({ label, name, type = "text", value, onChange }) {
   return (
     <div>
       <label className="block mb-1 text-gray-600 font-medium">{label}</label>
       <input
         type={type}
         name={name}
+        value={value}
         onChange={onChange}
-        className="w-full p-3 rounded-lg bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="w-full p-3 rounded-lg bg-blue-50 border border-blue-200 focus:ring-2 focus:ring-blue-400 outline-none"
+        required
       />
     </div>
   );
 }
 
+/* ===== RADIO ===== */
 function Radio({ label, value, name, onChange }) {
   return (
     <label className="flex items-center gap-2 cursor-pointer text-gray-700">
@@ -125,6 +160,7 @@ function Radio({ label, value, name, onChange }) {
         value={value}
         onChange={onChange}
         className="accent-blue-600"
+        required
       />
       {label}
     </label>

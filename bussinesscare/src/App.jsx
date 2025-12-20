@@ -25,6 +25,9 @@ import Award from "./pages/Award";
 import Services from "./pages/Services";
 import Videos from "./pages/Videos";
 import GalleryPage from "./pages/Gallery";
+import OurFounder from "./pages/OurFounders";
+import MissionVision from "./pages/MissionVision";
+import WhyUs from "./pages/WhyUs";
 // -------------------- ADMIN PAGES --------------------
 import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
@@ -67,6 +70,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/about/founders" element={<OurFounder />} />
+        <Route path="/about/mission-vision" element={<MissionVision />} />
+        <Route path="/about/why-us" element={<WhyUs />} />
         
 
         
@@ -76,6 +82,7 @@ function App() {
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/upload" element={<AdminUpload />} /> {/* optional */}
+        <Route path="/admin/navbar" element={<AdminNavbar />} /> {/* optional */}
 
       </Routes>
     </BrowserRouter>

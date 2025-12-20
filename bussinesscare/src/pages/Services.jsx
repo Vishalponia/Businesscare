@@ -82,7 +82,9 @@ function ServiceSection({ bg, title, text, image, extra }) {
             <p className="font-semibold text-gray-800 mb-6">{extra}</p>
           )}
 
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
+          <button 
+          onClick={() => window.location.href = "tel:+917042438293"}
+          className="bg-blue-900 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
             Call Now
           </button>
         </div>

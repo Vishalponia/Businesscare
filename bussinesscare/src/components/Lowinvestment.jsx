@@ -16,7 +16,9 @@ export default function LowInvestmentBigBuzz() {
             </p>
 
             <div className="flex justify-center lg:justify-start">
-              <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-xl px-7 py-3 sm:px-8 sm:py-4 text-base sm:text-lg shadow-lg flex items-center gap-2">
+              <button 
+               onClick={() => window.location.href = "tel:+917042438293"}
+              className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-xl px-7 py-3 sm:px-8 sm:py-4 text-base sm:text-lg shadow-lg flex items-center gap-2">
                 📞 Call Now
               </button>
             </div>

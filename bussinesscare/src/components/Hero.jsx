@@ -229,10 +229,14 @@ export default function HeroSection() {
               >
                 Schedule an Appointment
               </motion.button>
-
-              <button className="bg-orange-500 text-white px-6 py-3 rounded-lg">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={() => navigate("/about/founders")}
+                className="bg-orange-600 text-white px-6 py-3 rounded-lg"
+              >
                 Our Achievements
-              </button>
+              </motion.button>
+
             </div>
           </motion.div>
         </div>

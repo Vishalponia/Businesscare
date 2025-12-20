@@ -23,13 +23,17 @@ export default function MediaPlatformSection() {
           </p>
 
           {/* Gold Button */}
-          <button className="flex items-center gap-3 
+          <button
+           onClick={() => window.location.href = "tel:+917042438293"}
+          className="flex items-center gap-3 
             bg-gradient-to-r from-yellow-500 to-yellow-700  
             hover:from-yellow-400 hover:to-yellow-600
             text-black px-8 py-3 rounded-xl text-lg 
             shadow-[0_0_20px_rgba(255,215,0,0.4)] 
             transition font-bold tracking-wide w-fit">
-            <PhoneIcon className="w-6 h-6 text-black" />
+            <PhoneIcon 
+            
+            className="w-6 h-6 text-black" />
             Call Now
           </button>
 

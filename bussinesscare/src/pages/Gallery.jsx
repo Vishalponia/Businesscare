@@ -55,7 +55,7 @@ export default function Gallery() {
             <img
               src="https://businesscare.org.in/wp-content/uploads/2023/03/WhatsApp-Image-2023-03-31-at-12.42.45.png"
               alt="Gallery Highlight"
-              className="w-full rounded-2xl shadow-2xl"
+              className="w-full rounded-2xl  brightness-150"
             />
           </div>
         </div>
