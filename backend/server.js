@@ -36,6 +36,9 @@ app.use(morgan("dev"));
 app.use(rateLimit({ windowMs: 60*1000, max: 100 }));
 
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
 
 
 
