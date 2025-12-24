@@ -206,7 +206,10 @@ export default function HeroSection() {
               Mr. Ankur Bansal & Ms. Pooja Sharma
             </div>
 
-            <p className="font-bold text-gray-900">[CELEBRITY COACHES]</p>
+            <p
+             onClick={() => navigate("/about/founders")}
+             className="inline-block px-6 py-4  text-xl sm:text-3xl md:text-4xl lg:text-2xl font-extrabold  text-yellow-500 bg-[#F5E6F1]  rounded-2xl 
+                   cursor-pointer transition-all duration-300 hover:bg-yellow-500 hover:text-[#420037]">CELEBRITY COACHES</p>
 
             <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900">
               अब बदलेगा इंडिया का बिज़नेस, आ गया है Business Care,

@@ -24,9 +24,12 @@ export default function WhyEntrepreneurFail() {
 
           {/* CONTENT */}
           <div className="space-y-5 text-center lg:text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#420037] leading-tight">
-              Why Entrepreneurship Fail?
-            </h2>
+            
+              <h2 className="inline-block px-6 py-4  text-xl sm:text-3xl md:text-4xl lg:text-2xl font-extrabold  text-yellow-500 bg-[#F5E6F1]  rounded-2xl 
+                   cursor-pointer transition-all duration-300 hover:bg-yellow-900 hover:text-[#420037]">
+            Why Entrepreneurship Fail?
+               </h2>
+          
 
             <p className="text-sm sm:text-base md:text-lg text-white font-bold leading-relaxed">
               Insufficient marketing, wrong platforms, a lacklustre business plan or even wrong

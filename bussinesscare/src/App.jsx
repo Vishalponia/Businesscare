@@ -28,6 +28,7 @@ import GalleryPage from "./pages/Gallery";
 import OurFounder from "./pages/OurFounders";
 import MissionVision from "./pages/MissionVision";
 import WhyUs from "./pages/WhyUs";
+import About from "./pages/About";
 // -------------------- ADMIN PAGES --------------------
 import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
@@ -73,6 +74,7 @@ function App() {
         <Route path="/about/founders" element={<OurFounder />} />
         <Route path="/about/mission-vision" element={<MissionVision />} />
         <Route path="/about/why-us" element={<WhyUs />} />
+        <Route path="/about" element={<About />} />
         
 
         

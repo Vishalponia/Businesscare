@@ -38,7 +38,8 @@ export default function Award() {
           
           {/* LEFT CONTENT */}
           <div className="text-white">
-            <h1 className="text-4xl md:text-6xl font-extrabold text-yellow-400 mb-6">
+            <h1 className="inline-block px-6 py-4  text-xl sm:text-3xl md:text-4xl lg:text-2xl font-extrabold  text-yellow-500 bg-[#F5E6F1]  rounded-2xl 
+                   cursor-pointer transition-all duration-300 hover:bg-yellow-500 hover:text-[#420037]">
               Our Awards & Recognition
             </h1>
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
@@ -53,8 +54,9 @@ export default function Award() {
           <div className="flex justify-center md:justify-end">
             <img
               src="https://businesscare.org.in/wp-content/uploads/2023/03/O9P.jpg"
+              // src="https://businesscare.org.in/wp-content/uploads/2023/04/PUJ-JII-1-scaled.jpg"
               alt="Awarded Person"
-              className="w-[300px] md:w-[420px] lg:w-[400px] rounded-2xl shadow-2xl border-4 border-yellow-400"
+              className="w-[300px] md:w-[420px] lg:w-[400px] rounded-2xl shadow-2xl border-4 border-yellow-400  transition-transform duration-500 ease-in-out hover:scale-120"
             />
           </div>
         </div>

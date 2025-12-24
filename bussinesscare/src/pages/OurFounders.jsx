@@ -5,14 +5,15 @@ export default function OurFounder() {
   return (
     <>
     <Navbar/>
-      <div className="bg-yellow-500 text-gray-800">
+      <div className="bg-yellow-500 text-gray-800 pt-9">
 
         {/* ================= TOP IMAGE ================= */}
-        <div className="w-full">
+        <div className="w-full h-full
+    ">
           <img
             src="https://businesscare.org.in/wp-content/uploads/2023/03/IMG-20220824-WA0016-2.jpg"
             alt="Founder Banner"
-            className="w-full h-full object-cover"
+            className="w-full h-auto object-contain"
           />
         </div>
 

@@ -10,10 +10,19 @@ export default function BusinessCarePossible() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* CONTENT */}
           <div className="space-y-4 sm:space-y-5 text-center lg:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-yellow-500 leading-snug">
-              BUSINESS CARE <br className="hidden sm:block" />
+            {/* <h2 className="text-xl  bg-[#F5E6F1] rounded-2xl sm:text-3xl md:text-4xl lg:text-2xl font-extrabold text-yellow-500 leading-snug">
+              BUSINESS CARE 
               MAKING IMPOSSIBLE POSSIBLE
+            </h2>  */}
+            <h2 className="
+             inline-block px-6 py-4  text-xl sm:text-3xl md:text-4xl lg:text-2xl font-extrabold  text-yellow-500 bg-[#F5E6F1]  rounded-2xl 
+                   cursor-pointer transition-all duration-300 hover:bg-yellow-500 hover:text-[#420037]">
+                     BUSINESS CARE <br/>
+                    MAKING IMPOSSIBLE POSSIBLE
             </h2>
+
+            <br/>
+            <br/>
 
             <p className="text-sm sm:text-base md:text-lg text-yellow-400 leading-relaxed font-medium">
               Let&apos;s Change The Strategy. By India’s Most Recent Business Coaches & Business

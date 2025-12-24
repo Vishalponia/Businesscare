@@ -264,10 +264,10 @@ export default function Footer() {
           </p>
             
           <div className="flex justify-center gap-8 mt-4 text-sm">
-            <Link to="/privacy-policy" className="cursor-pointer hover:text-yellow-500">
+            <Link to="/services" className="cursor-pointer hover:text-yellow-500">
               Privacy Policy
             </Link>
-            <Link to="/cookie-policy" className="cursor-pointer hover:text-yellow-500">
+            <Link to="/services" className="cursor-pointer hover:text-yellow-500">
               Cookie Policy
             </Link>
           </div>
