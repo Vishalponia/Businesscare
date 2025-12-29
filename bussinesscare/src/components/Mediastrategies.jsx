@@ -7,7 +7,7 @@ export default function MediaStrategySection() {
 
         {/* LEFT CONTENT */}
         <div className="space-y-5">
-          <h2 className="inline-block px-6 py-4  text-xl sm:text-3xl md:text-4xl lg:text-2xl font-extrabold  text-yellow-500 bg-[#F5E6F1]  rounded-2xl 
+          <h2 className="inline-block px-6 py-4  text-xl sm:text-xl md:text-xl lg:text-xl font-extrabold  text-white bg-[#3f2539]  rounded-3xl 
                    cursor-pointer transition-all duration-300 hover:bg-yellow-500 hover:text-[#420037]">
             BIGGEST MEDIA STRATEGY CONSULTANTS
           </h2>

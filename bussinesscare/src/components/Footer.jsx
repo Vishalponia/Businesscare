@@ -163,17 +163,17 @@ export default function Footer() {
               <FooterLink to="/about/founders">Our Founders</FooterLink>
               <FooterLink to="/about/why-us">Why Business Care</FooterLink>
 
-              <li className="mt-4">
+              <li className="mt-2">
                 <Link
                   to="/form-options"
-                  className="text-[20px] font-extrabold bg-gradient-to-r from-yellow-300 to-yellow-600 
+                  className="text-[16px] font-extrabold bg-gradient-to-r from-yellow-300 to-yellow-600 
                   text-transparent bg-clip-text hover:scale-110 transition inline-block"
                 >
                   ⭐ Business Registration Form
                 </Link>
               </li>
 
-              <li className="mt-4">
+              <li className="mt-2">
                 <Link
                   to="/admin"
                   className="text-yellow-400 hover:text-yellow-500 font-semibold"
@@ -241,9 +241,9 @@ export default function Footer() {
           <div>
             <h3 className="text-yellow-400 font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li>📞 +91 7042-438-293</li>
+              <li>📞 +91 8076151724</li>
               <li>✉️ info@businesscare.org.in</li>
-              <li>📍 A-111, Sec-63, Noida UP</li>
+             
             </ul>
 
             <div className="flex gap-4 mt-6">

@@ -5,7 +5,7 @@ export default function LowInvestmentBigBuzz() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* CONTENT */}
           <div className="space-y-5 text-center lg:text-left">
-            <h2 className="inline-block px-6 py-4  text-xl sm:text-3xl md:text-4xl lg:text-2xl font-extrabold  text-yellow-500 bg-[#F5E6F1]  rounded-2xl 
+            <h2 className="inline-block px-6 py-4  text-xl sm:text-3xl md:text-xl lg:text-xl font-bold  text-white bg-[#420037]  rounded-3xl 
                    cursor-pointer transition-all duration-300 hover:bg-yellow-500 hover:text-[#420037]">
               Low Investment, Big Buzz
             </h2>

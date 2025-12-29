@@ -9,7 +9,7 @@ export default function MediaPlatformSection() {
         <div className="space-y-7">
 
           {/* Heading */}
-          <h2 className="inline-block px-6 py-4  text-xl sm:text-3xl md:text-4xl lg:text-2xl font-extrabold  text-yellow-500 bg-[#F5E6F1]  rounded-2xl 
+          <h2 className="inline-block px-6 py-4  text-xl sm:text-xl md:text-xl lg:text-xl font-extrabold  text-white bg-[#420037]  rounded-3xl 
                    cursor-pointer transition-all duration-300 hover:bg-yellow-500 hover:text-[#420037]">
             How to Choose the Right Media Platforms
           </h2>

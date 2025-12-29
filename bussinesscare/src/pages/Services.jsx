@@ -64,12 +64,12 @@ export default function Services() {
 
 function ServiceSection({ bg, title, text, image, extra }) {
   return (
-    <section className={`${bg} py-0`}>
+    <section className={`${bg} py-0 `}>
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
         {/* CONTENT */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6  mt-4 text-gray-900">
             {title}
           </h2>
 
