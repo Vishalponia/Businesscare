@@ -247,11 +247,11 @@ export default function Footer() {
             </ul>
 
             <div className="flex gap-4 mt-6">
-              <SocialLink url="https://facebook.com"><Facebook size={22} /></SocialLink>
-              <SocialLink url="https://twitter.com"><Twitter size={22} /></SocialLink>
+              <SocialLink url="https://www.facebook.com/profile.php?id=61550928209427"><Facebook size={22} /></SocialLink>
+              <SocialLink url="https://x.com/BusinesscareI"><Twitter size={22} /></SocialLink>
               <SocialLink url="https://linkedin.com"><Linkedin size={22} /></SocialLink>
-              <SocialLink url="https://instagram.com"><Instagram size={22} /></SocialLink>
-              <SocialLink url="https://youtube.com"><Youtube size={22} /></SocialLink>
+              <SocialLink url="https://www.instagram.com/businesscare111/"><Instagram size={22} /></SocialLink>
+              <SocialLink url="https://www.youtube.com/@Businesscaretvshow"><Youtube size={22} /></SocialLink>
             </div>
           </div>
 

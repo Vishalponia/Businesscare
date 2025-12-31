@@ -177,7 +177,7 @@ export default function HeroSection() {
   const navigate = useNavigate();
 
   return (
-    <section className="w-full bg-gradient-to-r from-blue-500 to-blue-300 pt-20 md:pt-28 pb-14">
+    <section className="w-full bg-gradient-to-r from-blue-400 to-blue-300 pt-20 md:pt-28 pb-14">
       <div className="max-w-7xl mx-auto px-4">
         {/* MAIN GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -202,13 +202,17 @@ export default function HeroSection() {
               MEET LIVE WITH INDIA'S CELEBRITY BUSINESS COACHES
             </h2>
 
-            <div className="text-lg sm:text-xl md:text-2xl font-bold text-orange-400">
+            <div 
+              onClick={() => navigate("/about/founders")}
+              className="text-lg sm:text-xl md:text-2xl font-bold text-purple-800 hover:text-indigo-700 cursor-pointer">
               Mr. Ankur Bansal & Ms. Pooja Sharma
             </div>
 
-            <p className="text-base sm:text-lg md:text-xl font-bold text-orange-500">
+            <h2
+             onClick={() => navigate("/about/founders")}
+             className="text-base sm:text-lg md:text-xl font-bold text-orange-500 hover:text-red-600 cursor-pointer">
               [CELEBRITY COACHES]
-            </p>
+            </h2>
 
             <p className="text-base sm:text-lg md:text-xl font-bold text-gray-900">
               अब बदलेगा इंडिया का बिज़नेस, आ गया है Business Care,

@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 export default function Gallery() {
+  const navigate = useNavigate();
   const images = [
     "https://businesscare.org.in/wp-content/uploads/2023/03/IMG-20221013-WA0030.jpg",
     "https://businesscare.org.in/wp-content/uploads/2023/03/20220218_191740-1335x2048.jpg",
@@ -11,11 +13,15 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto text-center">
 
         {/* Stylish Heading */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-wide drop-shadow-sm">
-          <span className="bg-yellow-500 bg-clip-text text-transparent">
-            Gallery
-          </span>
-        </h2>
+        <h2
+  onClick={() => navigate("/gallery")}
+  className="inline-block text-4xl md:text-5xl font-extrabold px-6 py-3 rounded-2xl
+             bg-yellow-500 text-white cursor-pointer
+             hover:bg-amber-600 transition-all duration-300 shadow-lg"
+>
+  Gallery
+</h2>
+        
 
         <p className="text-yellow-500 mt-3 font-bold text-xl">
           Moments, Events & Powerful Strategies
