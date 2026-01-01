@@ -65,7 +65,7 @@ export default function Award() {
       {/* ================= AWARDS GALLERY ================= */}
       <section className="bg-black py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center text-4xl font-bold text-yellow-400 mb-14">
+          <h2 className="text-center text-4xl font-bold text-yellow-400 mb-14 border-4 border-yellow-500  rounded-3xl">
             Glimpses of Our Achievements
           </h2>
 

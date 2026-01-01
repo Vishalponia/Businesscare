@@ -43,7 +43,7 @@ export default function Services() {
         title="HOW TO TARGET YOUR AUDIENCE"
         text="Grab real customers, end buyer's hassle, and start your sales."
         image="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.24.03.png"
-        extra="For More Information — Contact us: 7042438293"
+        extra="For More Information — Contact us: 8076151724 "
       />
 
       {/* ================= SECTION 4 ================= */}
@@ -52,7 +52,7 @@ export default function Services() {
         title="HOW TO GROW YOUR SALES"
         text="Find your real buyer. When the need of the customer arises, then your business will shine."
         image="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.19.05.png"
-        extra="For More Understanding — Contact us: 7042438293"
+        extra="For More Understanding — Contact us: 8076151724 "
       />
 
       <Footer />
@@ -82,7 +82,7 @@ function ServiceSection({ bg, title, text, image, extra }) {
           )}
 
           <button
-            onClick={() => (window.location.href = "tel:+917042438293")}
+            onClick={() => (window.location.href = "tel:+918076151724 ")}
             className="cursor-pointer bg-blue-900 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition"
           >
             Call Now

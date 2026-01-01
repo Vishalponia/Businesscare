@@ -33,7 +33,8 @@ export default function Gallery() {
         className="pt-28 pb-20 py-0 bg-cover bg-center relative"
         style={{
           backgroundImage:
-            "url(https://images.pexels.com/photos/424436/pexels-photo-424436.jpeg)",
+            // "url(https://images.pexels.com/photos/424436/pexels-photo-424436.jpeg)",
+            "url(https://images.pexels.com/photos/722421/pexels-photo-722421.jpeg)",
         }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
@@ -64,7 +65,7 @@ export default function Gallery() {
       {/* GALLERY GRID */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-center text-3xl font-bold text-yellow-400 mb-12">
+          <h2 className="text-center text-3xl font-bold text-yellow-400 mb-12 border-2 border-yellow-500 rounded-3xl">
             Event & Award Moments
           </h2>
 

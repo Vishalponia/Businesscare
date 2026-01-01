@@ -108,7 +108,9 @@ export default function Videos() {
           style={{
             backgroundImage:
               "url(https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg)",
+             
           }}
+
         ></div>
 
         {/* Overlay */}
@@ -117,10 +119,10 @@ export default function Videos() {
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-6 flex items-center min-h-[420px] md:min-h-[520px]">
           <div className="text-white max-w-2xl">
-            <h1 className="text-4xl md:text-7xl font-bold mb-6 text-yellow-400">
+            <h1 className="text-4xl md:text-7xl font-bold mb-6 text-yellow-500">
               Our Video Presence
             </h1>
-            <p className=" text-green-500  text-lg font-extrabold leading-relaxed">
+            <p className=" text-white  text-xl font-extrabold leading-relaxed">
               BusinessCare brings your brand into the spotlight through powerful
               video storytelling, national coverage and impactful digital reach.
             </p>
@@ -131,7 +133,7 @@ export default function Videos() {
       {/* ================= VIDEOS SECTION ================= */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-center text-3xl md:text-4xl font-bold text-yellow-400 mb-12">
+          <h2 className="text-center text-3xl md:text-4xl font-bold text-yellow-600 mb-12 border-2 border-yellow-500 rounded-3xl">
             Featured Videos
           </h2>
 
