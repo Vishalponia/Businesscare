@@ -6,7 +6,7 @@ export default function MediaStrategySection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT CONTENT */}
-        <div className="space-y-5">
+        <div className="space-y-5 pt-4">
           <h2 className="inline-block px-6 py-4  text-xl sm:text-xl md:text-xl lg:text-xl font-extrabold  text-white bg-[#3f2539]  rounded-3xl 
                    cursor-pointer transition-all duration-300 hover:bg-yellow-500 hover:text-[#420037]">
             BIGGEST MEDIA STRATEGY CONSULTANTS

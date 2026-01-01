@@ -241,8 +241,15 @@ export default function Footer() {
           <div>
             <h3 className="text-yellow-400 font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li>📞 +91 8076151724</li>
-              <li>✉️ info@businesscare.org.in</li>
+              <li
+               onClick={() => window.location.href = "tel:+91807651724"}
+               className="cursor-pointer"
+              >📞 +91 8076151724</li>
+
+              <li
+               onClick={() => window.location.href = "mailto:info@businesscare.org.in"}
+               className="cursor-pointer"
+              >✉️ info@businesscare.org.in</li>
              
             </ul>
 

@@ -4,7 +4,7 @@ export default function LowInvestmentBigBuzz() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-0 sm:py-16 lg:py-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* CONTENT */}
-          <div className="space-y-5 text-center lg:text-left">
+          <div className="space-y-5 text-center lg:text-left pt-4">
             <h2 className="inline-block px-6 py-4  text-xl sm:text-3xl md:text-xl lg:text-xl font-bold  text-white bg-[#420037]  rounded-3xl 
                    cursor-pointer transition-all duration-300 hover:bg-yellow-500 hover:text-[#420037]">
               Low Investment, Big Buzz
@@ -18,7 +18,7 @@ export default function LowInvestmentBigBuzz() {
 
             <div className="flex justify-center lg:justify-start">
               <button 
-               onClick={() => window.location.href = "tel:+917042438293"}
+               onClick={() => window.location.href = "tel:+91807651724"}
               className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-xl px-7 py-3 sm:px-8 sm:py-4 text-base sm:text-lg shadow-lg flex items-center gap-2">
                 📞 Call Now
               </button>

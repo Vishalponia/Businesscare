@@ -6,7 +6,7 @@ export default function MediaPlatformSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
         {/* LEFT CONTENT */}
-        <div className="space-y-7">
+        <div className="space-y-7 pt-4">
 
           {/* Heading */}
           <h2 className="inline-block px-6 py-4  text-xl sm:text-xl md:text-xl lg:text-xl font-extrabold  text-white bg-[#420037]  rounded-3xl 
@@ -24,7 +24,7 @@ export default function MediaPlatformSection() {
 
           {/* Gold Button */}
           <button
-           onClick={() => window.location.href = "tel:+917042438293"}
+           onClick={() => window.location.href = "tel:+91807651724"}
           className="flex items-center gap-3 
             bg-gradient-to-r from-yellow-500 to-yellow-700  
             hover:from-yellow-400 hover:to-yellow-600

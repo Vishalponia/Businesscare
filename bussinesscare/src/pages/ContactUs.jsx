@@ -119,7 +119,7 @@ export default function ContactUs() {
 
             <button
               type="submit"
-              className="w-full bg-green-600 text-white font-bold py-4 rounded-xl hover:bg-green-700 transition"
+              className="w-full bg-green-600 text-white font-bold py-4 rounded-xl hover:bg-green-700 transition cursor-pointer"
             >
               Send on WhatsApp
             </button>
